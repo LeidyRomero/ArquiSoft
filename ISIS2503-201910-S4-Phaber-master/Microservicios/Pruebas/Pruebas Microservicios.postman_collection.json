@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "18123f6a-df0f-4571-98d9-88f07c968508",
+		"name": "Pruebas Microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get reportes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/reportes/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"reportes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/ventas",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/productos",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cajas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/cajas",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"cajas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/clientes",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get facturas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.206.56.73:8000/facturas/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"facturas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\": \"cliente6\",\n    \"identificacion\": \"111111\",\n    \"email\": \"email@email.com\"\n}"
+				},
+				"url": {
+					"raw": "http://18.206.56.73:8000/clientecreate/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"clientecreate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"codigoBarras\":\"222\",\r\n    \"precio\":\"2000\",\r\n    \"unidades\":\"15\",\r\n    \"iva\":\"0.15\",\r\n    \"nombre\":\"prueba 2\",\r\n    \"categoria\":\"dulces\"\r\n}"
+				},
+				"url": {
+					"raw": "http://18.206.56.73:8000/productocreate/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"productocreate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Venta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"paymentType\":\"efectivo\",\r\n\t\"products\":\"a,a,1651561,45898,45898,45898,45898,a,1651561,45898,\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "18.206.56.73:8000/ventasCreate/",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"ventasCreate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerarReporte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "18.206.56.73:8000/generarReporte/",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"generarReporte",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post factura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n\t\"client\":\"1234567\",\r\n\t\"sale\":\"4\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://18.206.56.73:8000/cajasCreate/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"cajasCreate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Cajas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"dineroActual\":\"500000\",\r\n\t\"resolucionDeFacturacion\":\"RDF\",\r\n\t\"lectorCodigoBarras\":\"1\",\r\n\t\"bascula\":\"10.00\",\r\n\t\"cajonMonedero\": \"1\",\r\n\t\"impresoraPOS\":\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://18.206.56.73:8000/cajasCreate/",
+					"protocol": "http",
+					"host": [
+						"18",
+						"206",
+						"56",
+						"73"
+					],
+					"port": "8000",
+					"path": [
+						"cajasCreate",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

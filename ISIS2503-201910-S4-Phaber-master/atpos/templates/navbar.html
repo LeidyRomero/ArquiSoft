@@ -1,0 +1,42 @@
+<style>
+    #nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    #nav li {
+        float: left;
+    }
+
+    #nav li a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+    }
+</style>
+
+<ul id='nav'>
+    <li><img src="/media/logo.png" width="50" height="50" alt="Logo" style="text-shadow: 2px 2px; margin-right: 20px">
+    </li>
+    <li><a href="/" target="_self" rel="nofollow" class="navbar-brand"> Atpos<span class="version">2.0</span></a></li>
+    <li><a href="/api/cajas">Cajas</a></li>
+    <li><a href="/api/clientes">Clientes</a></li>
+    <li><a href="/api/productos">Productos</a></li>
+    <li><a href="/api/ventas">Ventas</a></li>
+    <li><a href="/api/facturas">Facturas</a></li>
+    <li><a href="/api/reportes">Reportes</a></li>
+    <form class="form-inline my-2 my-lg-0">
+        {% if user.is_authenticated %}
+        <ul class="nav navbar-nav navbar-right">
+            <li><a style="font-size:120%" class="nav-link">{{ user.username }}</a></li>
+            <li><a style="font-size:120%; padding-right:20px" class="nav-link" href="/logout">Log out</a></li>
+        </ul>
+        {% else %}
+        <ul class="nav navbar-nav navbar-right">
+            <li><a style="font-size:120%; padding-right:20px" class="navbar-link" href="/login/auth0">Login</a></li>
+        </ul>
+        {% endif %}
+    </form>
+</ul>
